@@ -49,7 +49,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/f
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
 # Webkit
-ENABLE_WEBGL := true
+ENABLE_WEBGL := false
 TARGET_FORCE_CPU_UPLOAD := true
 
 # QCOM
