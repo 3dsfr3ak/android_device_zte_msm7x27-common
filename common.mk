@@ -46,20 +46,11 @@ PRODUCT_PACKAGES += \
     power.msm7x27 \
     hwcomposer.msm7x27
 
-# FM Radio
-PRODUCT_PACKAGES += \
-    libfmradio.si4708 \
-    Effem
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm7x27 \
     audio_policy.msm7x27 \
     audio.usb.default
-
-# FM Radio
-PRODUCT_COPY_FILES += \
-        frameworks/native/data/etc/com.stericsson.hardware.fm.receiver.xml:system/etc/permissions/com.stericsson.hardware.fm.receiver.xml
 
 # Media and vold
 PRODUCT_COPY_FILES += \

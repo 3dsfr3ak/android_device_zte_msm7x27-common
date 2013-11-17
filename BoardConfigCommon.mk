@@ -49,3 +49,7 @@ BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
 # Fonts
 SMALLER_FONT_FOOTPRINT := true
+
+## TEMPORARY HACK: skip building external/chromium_org/
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+Hack: skip chromium_org building for now
