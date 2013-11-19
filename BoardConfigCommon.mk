@@ -28,10 +28,16 @@ TARGET_BOOTLOADER_BOARD_NAME := sharp
 # Recovery
 BOARD_CUSTOM_GRAPHICS := ../../../device/zte/msm7x27-common/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/msm7x27-common/recovery/recovery_keys.c
+USE_SET_METADATA := false
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/zte/msm7x27
 BOARD_KERNEL_BASE := 0x02600000
+
+## SELINUX policy version override
+ifndef BUILD_WITH_30X_KERNEL	
+»       POLICYVERS := 24	
+endif
 
 # Provides
 BOARD_PROVIDES_LIBRIL := true
