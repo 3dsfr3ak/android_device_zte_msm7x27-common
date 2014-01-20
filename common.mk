@@ -27,6 +27,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 # Inherit hdpi 512
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
+# Install/Uninstall google apps
+$(call inherit-product, vendor/google/gapps_armv6_tiny.mk)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
@@ -61,3 +64,13 @@ PRODUCT_COPY_FILES += \
     device/zte/msm7x27-common/media/audio_policy.conf:system/etc/audio_policy.conf \
     device/zte/msm7x27-common/media/media_codecs.xml:system/etc/media_codecs.xml \
     device/zte/msm7x27-common/prebuilt/gps.conf:system/etc/gps.conf
+
+# SELinux
+BOARD_SEPOLICY_DIRS += device/zte/msm7x27-common/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    file_contexts
+
+# KSM
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ksm.default=1

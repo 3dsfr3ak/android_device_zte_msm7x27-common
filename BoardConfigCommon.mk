@@ -17,6 +17,7 @@
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
 USE_CAMERA_STUB := true
+COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB -DZTE_CAMERA_HARDWARE
 
 # Use the non-open-source parts
 include device/qcom/msm7x27/BoardConfigCommon.mk
