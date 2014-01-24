@@ -54,6 +54,7 @@ LOCAL_C_INCLUDES       := frameworks/base/services/ frameworks/base/include
 LOCAL_C_INCLUDES       += hardware/libhardware/include/ hardware
 LOCAL_C_INCLUDES       += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr 
+LOCAL_CFLAGS += -DCAMERA_NO_UNWANTED_MSG
 
 include $(BUILD_SHARED_LIBRARY)
 endif
